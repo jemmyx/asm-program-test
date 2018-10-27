@@ -13,6 +13,7 @@ SECTION .DATA
 		msg3Len			equ $-msg3
 
 ; Code goes in the text section
+
 SECTION .TEXT
 	GLOBAL _start			; must be declared for linker
 	
@@ -42,11 +43,7 @@ _start:
 	int 80h					;call the kernel
 
 
-;--------------------------------
-;								*
-;			FUNCTIONS			*
-;								*
-;--------------------------------
+;Functions definitions
 
 writestdout:
 	mov ebx,1				; file description STDOUT
